@@ -2,11 +2,12 @@ import fs from 'fs';
 import Link from 'next/link';
 import path from 'path';
 
-export default function PapersPage({
-  params: { category },
-}: {
+interface PageProps {
   params: { category: string };
-}) {
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default function PapersPage({ params: { category } }: PageProps) {
   const getPapers = () => {
     const papersDirectory = path.join(
       process.cwd(),
