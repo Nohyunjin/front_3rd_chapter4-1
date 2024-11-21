@@ -2,25 +2,11 @@ import fs from 'fs';
 import Link from 'next/link';
 import path from 'path';
 
-type PageProps = {
+export default function PapersPage({
+  params: { category },
+}: {
   params: { category: string };
-};
-
-export function generateStaticParams() {
-  return [
-    { category: 'AGENT' },
-    { category: 'LLM' },
-    { category: 'MRC' },
-    { category: 'STT' },
-    { category: 'TTS' },
-    { category: 'ETC' },
-    { category: 'SERVICE' },
-    { category: 'HARDWARE' },
-  ];
-}
-
-export default function PapersPage({ params }: PageProps) {
-  const { category } = params;
+}) {
   const getPapers = () => {
     const papersDirectory = path.join(
       process.cwd(),
