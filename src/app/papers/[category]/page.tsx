@@ -2,6 +2,13 @@ import fs from 'fs';
 import Link from 'next/link';
 import path from 'path';
 
+type Props = {
+  params: {
+    category: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
 export function generateStaticParams() {
   return [
     { category: 'AGENT' },
@@ -9,17 +16,14 @@ export function generateStaticParams() {
     { category: 'MRC' },
     { category: 'STT' },
     { category: 'TTS' },
-    { category: '기타' },
-    { category: '서비스' },
-    { category: '하드웨어' },
+    { category: 'ETC' },
+    { category: 'SERVICE' },
+    { category: 'HARDWARE' },
   ];
 }
 
-export default function PapersPage({
-  params: { category },
-}: {
-  params: { category: string };
-}) {
+export default function PapersPage({ params }: Props) {
+  const { category } = params;
   const getPapers = () => {
     const papersDirectory = path.join(
       process.cwd(),
