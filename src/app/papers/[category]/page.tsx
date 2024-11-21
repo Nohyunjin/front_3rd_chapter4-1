@@ -4,6 +4,19 @@ import path from 'path';
 
 type Params = Promise<{ category: string }>;
 
+export function generateStaticParams() {
+  return [
+    { category: 'AGENT' },
+    { category: 'LLM' },
+    { category: 'MRC' },
+    { category: 'STT' },
+    { category: 'TTS' },
+    { category: 'ETC' },
+    { category: 'SERVICE' },
+    { category: 'HARDWARE' },
+  ];
+}
+
 export default async function PapersPage({ params }: { params: Params }) {
   const { category } = await params;
   const getPapers = () => {
