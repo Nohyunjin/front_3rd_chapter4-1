@@ -22,9 +22,9 @@ export default function Home() {
               'MRC',
               'STT',
               'TTS',
-              '기타',
-              '서비스',
-              '하드웨어',
+              'ETC',
+              'SERVICE',
+              'HARDWARE',
             ].map((category) => (
               <Link
                 key={category}
