@@ -3,10 +3,7 @@ import Link from 'next/link';
 import path from 'path';
 
 type Props = {
-  params: {
-    category: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { category: string };
 };
 
 export function generateStaticParams() {
