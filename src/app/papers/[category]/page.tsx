@@ -2,7 +2,7 @@ import fs from 'fs';
 import Link from 'next/link';
 import path from 'path';
 
-type Props = {
+type PageProps = {
   params: { category: string };
 };
 
@@ -19,7 +19,7 @@ export function generateStaticParams() {
   ];
 }
 
-export default function PapersPage({ params }: Props) {
+export default function PapersPage({ params }: PageProps) {
   const { category } = params;
   const getPapers = () => {
     const papersDirectory = path.join(
