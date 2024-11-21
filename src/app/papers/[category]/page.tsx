@@ -2,12 +2,10 @@ import fs from 'fs';
 import Link from 'next/link';
 import path from 'path';
 
-interface PageProps {
-  params: { category: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+type Params = Promise<{ category: string }>;
 
-export default function PapersPage({ params: { category } }: PageProps) {
+export default async function PapersPage({ params }: { params: Params }) {
+  const { category } = await params;
   const getPapers = () => {
     const papersDirectory = path.join(
       process.cwd(),
