@@ -7,10 +7,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - DNS: http://abcdxyz.store/
 
 ## 배포 파이프라인
-
-## 배포 테스트
 ![프론트엔드 배포 파이프라인 drawio](https://github.com/user-attachments/assets/d839f182-601e-41d2-baec-7cb62fd32a39)
 
+## 배포 테스트
 변경된 내용이 적용되어 배포되는지 확인
 
 <코드 변경 전>
