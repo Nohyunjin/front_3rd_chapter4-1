@@ -17,3 +17,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 <코드 변경 후>
 ![alt text](image.png)
+
+
+## CDN 도입 전후 성능 개선 보고서
+![alt text](image-2.png)
